@@ -1,5 +1,23 @@
 # Mock Express request/response with Jest or sinon
 
+## Requirements
+
+- Node 10
+- npm 6
+
+## Setup
+
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm start` (to start the application locally) or `npm t` to run the tests.
+
+## npm scripts
+
+- `npm t` (`npm run test`) will run both `ava` and `jest`-based test suites.
+- `npm start` will start the application server (default PORT: 3000, can override using PORT environment variable)
+- `npx jest` will run just `jest`-based tests
+- `npx ava` will run just `ava`-based tests
+
 ## Requests
 
 ### Login
@@ -122,3 +140,31 @@ Sample Fail (401) Response:
 ```
 
 We're just interested in the 401 here :+1:.
+
+### Header Authentication
+
+```sh
+curl --request GET \
+  --url http://localhost:3000/session \
+  --header 'authorization: Bearer 76b1e728-1c14-43f9-aa06-6de5cbc064c2' \
+  -v
+```
+Sample Success (200) Response:
+```sh
+> GET /session HTTP/1.1
+> Host: localhost:3000
+> User-Agent: curl/7.54.0
+> Accept: */*
+> authorization: Bearer 76b1e728-1c14-43f9-aa06-6de5cbc064c2
+>
+< HTTP/1.1 200 OK
+< X-Powered-By: Express
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 19
+< ETag: W/"13-NGIK6C7P0giZ5uHUWH1fsFMw4TY"
+< Set-Cookie: session=-oSa0xHGDBZARqmdrTWjTQ.rExU9YRLm7dqNt3UfhVVTpnFnG0o_D2ZAlp-xfk3-1XOCFi_7Dc7d-MK3AguoyY8.1550437501888.3600000.tue12japVIW6kiCQ9o8UfTfYnIj5G_2auyeJXdOlOR0; path=/; expires=Sun, 17 Feb 2019 22:05:02 GMT; httponly
+< Date: Sun, 17 Feb 2019 21:05:01 GMT
+< Connection: keep-alive
+<
+{"username":"hugo"}
+```
