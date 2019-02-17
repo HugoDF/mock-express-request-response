@@ -1,10 +1,9 @@
 const express = require('express');
-const bodyParser = require('body-parser')
 const session = require('client-sessions')
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(session({
   secret: process.env.SESSION_SECRET || 'my-super-secret',
   cookieName: 'session',
