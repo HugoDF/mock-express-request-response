@@ -24,7 +24,7 @@
   },
   "ava": {
     "files": [
-      "./express-handlers.sinon-test.js"
+      "./*.sinon-test.js"
     ]
   },
   "jest": {
