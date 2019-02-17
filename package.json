@@ -1,5 +1,5 @@
 {
-  "name": "mock-express-req-res",
+  "name": "mock-express-request-response",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
