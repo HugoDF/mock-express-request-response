@@ -13,9 +13,9 @@ app.use(session({
 const { login, logout, checkAuth } = require('./express-handlers')
 const headerAuth = require('./header-auth-middleware');
 
-app.post('/session', login)
-app.delete('/session', logout)
-app.get('/session', headerAuth, checkAuth)
+app.post('/session', login);
+app.delete('/session', logout);
+app.get('/session', headerAuth, checkAuth);
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

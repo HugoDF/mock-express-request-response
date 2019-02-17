@@ -21,7 +21,7 @@ function getUser(username) {
 
 async function login(req, res) {
   try {
-    const { username, password } = req.body
+    const { username, password } = req.body;
     if (!username || !password) {
       return res.status(400).json({ message: 'username and password are required' });
     }
