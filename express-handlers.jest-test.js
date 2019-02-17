@@ -9,10 +9,23 @@ const mockResponse = () => {
   return res;
 };
 
-const { checkAuth } = require('./express-handlers');
+const { logout, checkAuth } = require('./express-handlers');
 
 // describe('login', () => {});
-// describe('logout', () => {});
+describe('logout', () => {
+  test('should set session.data to null', async () => {
+    const req = mockRequest({ username: 'hugo' });
+    const res = mockResponse();
+    await logout(req, res);
+    expect(req.session.data).toBeNull();
+  });
+  test('should 200', async () => {
+    const req = mockRequest({ username: 'hugo' });
+    const res = mockResponse();
+    await logout(req, res);
+    expect(res.status).toHaveBeenCalledWith(200);
+  });
+});
 describe('checkAuth', () => {
   test('should 401 if session data is not set', async () => {
     const req = mockRequest();
