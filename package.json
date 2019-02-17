@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava && jest"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,18 @@
     "jest": "^24.1.0",
     "jest-cli": "^24.1.0",
     "sinon": "^7.2.3"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "client-sessions": "^0.8.0",
+    "express": "^4.16.4"
+  },
+  "ava": {
+    "files": [
+      "./express-handlers.sinon-test.js"
+    ]
+  },
+  "jest": {
+    "testRegex": ".*.jest-test.js$"
   }
 }
