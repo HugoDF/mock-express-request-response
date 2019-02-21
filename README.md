@@ -1,5 +1,7 @@
 # Mock Express request/response with Jest or sinon
 
+Full post at https://codewithhugo.com/express-request-response-mocking/
+
 ## Requirements
 
 - Node 10
