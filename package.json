@@ -13,7 +13,7 @@
   "devDependencies": {
     "ava": "^1.2.1",
     "jest": "^24.1.0",
-    "sinon": "^7.2.3"
+    "sinon": "^9.0.1"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
