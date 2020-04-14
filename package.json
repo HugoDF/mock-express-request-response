@@ -11,7 +11,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^3.6.0",
+    "ava": "^3.7.0",
     "jest": "^25.3.0",
     "sinon": "^9.0.2"
   },
