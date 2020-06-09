@@ -16,7 +16,7 @@
     "sinon": "^9.0.2"
   },
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "client-sessions": "^0.8.0",
     "express": "^4.17.1"
   },
